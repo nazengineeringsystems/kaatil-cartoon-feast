@@ -11,8 +11,8 @@ const buttonVariants = cva(
         // Primary action buttons
         hero: [
           "bg-gradient-hero text-primary-foreground shadow-pop border-4 border-accent",
-          "hover:shadow-glow hover:scale-105 hover:rotate-1",
-          "active:scale-95 active:rotate-0 active:shadow-cartoon",
+          "hover:shadow-pop hover:scale-105",
+          "active:scale-95 active:shadow-cartoon",
           "transition-all duration-300 ease-out",
           "before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent",
           "before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
@@ -21,8 +21,8 @@ const buttonVariants = cva(
         // Secondary action buttons  
         spice: [
           "bg-gradient-spice text-accent border-4 border-accent shadow-cartoon",
-          "hover:shadow-pop hover:scale-105 hover:-rotate-1",
-          "active:scale-95 active:rotate-0",
+          "hover:shadow-pop hover:scale-105",
+          "active:scale-95",
           "transition-all duration-300 ease-out",
           "before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-spice-yellow/30 before:to-transparent",
           "before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500"
@@ -73,8 +73,8 @@ const buttonVariants = cva(
         // Danger/Delete buttons
         danger: [
           "bg-red-500 text-white border-4 border-red-700 shadow-cartoon",
-          "hover:bg-red-600 hover:shadow-pop hover:scale-105 hover:rotate-1",
-          "active:scale-95 active:rotate-0",
+          "hover:bg-red-600 hover:shadow-pop hover:scale-105",
+          "active:scale-95",
           "transition-all duration-300 ease-out"
         ]
       },
@@ -86,18 +86,10 @@ const buttonVariants = cva(
         xl: "px-10 py-5 text-xl min-h-[56px] rounded-2xl",
         xxl: "px-12 py-6 text-2xl min-h-[64px] rounded-3xl"
       },
-      animation: {
-        none: "",
-        bounce: "animate-bounce",
-        pulse: "animate-pulse",
-        wiggle: "hover:animate-pulse",
-        float: "hover:animate-bounce"
-      }
     },
     defaultVariants: {
       variant: "hero",
-      size: "default",
-      animation: "none"
+      size: "default"
     },
   }
 );
@@ -118,7 +110,6 @@ const CartoonButton = forwardRef<HTMLButtonElement, CartoonButtonProps>(
     className, 
     variant, 
     size, 
-    animation,
     loading = false,
     loadingText,
     icon,
@@ -140,7 +131,7 @@ const CartoonButton = forwardRef<HTMLButtonElement, CartoonButtonProps>(
     return (
       <button
         className={cn(
-          buttonVariants({ variant, size, animation }),
+          buttonVariants({ variant, size }),
           fullWidth && "w-full",
           rounded && "rounded-full",
           isPressed && "transform translate-y-1",

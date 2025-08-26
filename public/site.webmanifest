@@ -1,0 +1,29 @@
+{
+  "name": "Kaatil Mutton - Homestyle Mutton Restaurant",
+  "short_name": "Kaatil Mutton",
+  "description": "Experience the best homestyle mutton dishes with killer flavors! Authentic mutton recipes with fast delivery.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2D1810",
+  "theme_color": "#D97706",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/kaatil-favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/kaatil-favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16 32x32"
+    }
+  ],
+  "categories": ["food", "restaurant", "delivery"],
+  "lang": "en-US"
+}

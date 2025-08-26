@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Home, Info, Users, Phone } from "lucide-react";
+import { Menu, X, Home, Info, Users, Phone, ChefHat } from "lucide-react";
 import { CartoonButton } from "./CartoonButton";
 import goatMascot from "@/assets/goat-mascot.webp";
 
@@ -26,7 +26,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
   return (
     <>
       {/* Navigation Header */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b-4 border-accent shadow-cartoon" role="navigation" aria-label="Main navigation">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-cartoon" role="navigation" aria-label="Main navigation">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -48,20 +48,20 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
                 <Home className="w-4 h-4" />
                 Home
               </button>
-              <button 
-                onClick={() => onScrollToSection('about')}
+              <Link 
+                to="/about"
                 className="font-comic text-accent hover:text-primary transition-colors flex items-center gap-2"
               >
                 <Info className="w-4 h-4" />
                 About
-              </button>
-              <button 
-                onClick={() => onScrollToSection('menu')}
+              </Link>
+              <Link 
+                to="/menu"
                 className="font-comic text-accent hover:text-primary transition-colors flex items-center gap-2"
               >
-                <Users className="w-4 h-4" />
+                <ChefHat className="w-4 h-4" />
                 Menu
-              </button>
+              </Link>
               <Link 
                 to="/founder"
                 className="font-comic text-accent hover:text-primary transition-colors flex items-center gap-2"
@@ -141,21 +141,23 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               <span className="font-cartoon text-lg">Home</span>
             </button>
 
-            <button
-              onClick={() => handleNavClick('about')}
+            <Link
+              to="/about"
+              onClick={() => setIsOpen(false)}
               className="w-full flex items-center gap-4 p-3 rounded-xl border-2 border-accent bg-card hover:bg-primary hover:text-primary-foreground transition-all shadow-cartoon hover:shadow-pop group"
             >
               <Info className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
-              <span className="font-cartoon text-lg">Our Story</span>
-            </button>
+              <span className="font-cartoon text-lg">About Us</span>
+            </Link>
 
-            <button
-              onClick={() => handleNavClick('menu')}
+            <Link
+              to="/menu"
+              onClick={() => setIsOpen(false)}
               className="w-full flex items-center gap-4 p-3 rounded-xl border-2 border-accent bg-card hover:bg-primary hover:text-primary-foreground transition-all shadow-cartoon hover:shadow-pop group"
             >
-              <Users className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
+              <ChefHat className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
               <span className="font-cartoon text-lg">Menu</span>
-            </button>
+            </Link>
 
             <Link
               to="/founder"

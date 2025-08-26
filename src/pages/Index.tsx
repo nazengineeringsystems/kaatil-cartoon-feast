@@ -3,7 +3,7 @@ import { ComicPanel } from "@/components/ComicPanel";
 import { MenuCard } from "@/components/MenuCard";
 import { SteamEffect } from "@/components/SteamEffect";
 import { MobileNavigation } from "@/components/MobileNavigation";
-import { Star, Home, Users, Truck, Award, Heart, Phone, ArrowRight, ChefHat, Clock } from "lucide-react";
+import { Star, Home, Users, Truck, Award, Heart, Phone, ArrowRight, ChefHat, Clock, MapPin, Navigation } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
@@ -17,8 +17,6 @@ import happyCustomer from "@/assets/happy-customer.webp";
 import goatMascot from "@/assets/goat-mascot.webp";
 
 const Index = () => {
-  const [cart, setCart] = useState<string[]>([]);
-  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -31,12 +29,15 @@ const Index = () => {
     }
   };
 
-  const handleAddToCart = (itemName: string) => {
-    setCart(prev => [...prev, itemName]);
+  const handleOrder = (itemName: string) => {
+    // Open phone dialer for direct ordering
+    window.location.href = `tel:+919876543210`;
+    
+    // Show confirmation toast
     toast({
-      title: "Added to cart! 🎉",
-      description: `${itemName} has been added to your cart.`,
-      duration: 2000,
+      title: "Calling to Order! 📞",
+      description: `Get ready to order ${itemName} - we'll take your call right away!`,
+      duration: 3000,
     });
   };
 
@@ -46,7 +47,19 @@ const Index = () => {
       <MobileNavigation onScrollToSection={scrollToSection} />
       
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-16">
+      <section 
+        id="hero" 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 mt-4 sm:mt-6 md:mt-8 pb-16 sm:pb-20 md:pb-24 lg:pb-28"
+        style={{
+          backgroundImage: `url(${heroChef})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-gradient-hero/90"></div>
+        
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 sm:top-16 left-4 sm:left-10 w-12 sm:w-20 h-12 sm:h-20 bg-spice-yellow rounded-full animate-bounce"></div>
@@ -54,7 +67,7 @@ const Index = () => {
           <div className="absolute bottom-20 left-4 sm:left-20 w-8 sm:w-12 h-8 sm:h-12 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="container mx-auto px-6 sm:px-8 md:px-10 text-center relative z-10">
           {/* Mascot */}
           <div className="flex justify-center mb-6 sm:mb-8">
             <img 
@@ -77,50 +90,50 @@ const Index = () => {
             </p>
           </div>
           
-          {/* Hero Image */}
+          {/* Hero Content Card */}
           <div className="relative mb-6 sm:mb-8 px-4">
-            <img 
-              src={heroChef} 
-              alt="Happy Chef with Mutton" 
-              className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-2xl sm:rounded-3xl border-4 border-accent shadow-pop"
-              loading="eager"
-            />
-            <SteamEffect className="absolute top-2 sm:top-4 left-1/2 transform -translate-x-1/2" />
+            <div className="bg-card/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl border-4 border-accent shadow-pop p-6 sm:p-8 max-w-2xl mx-auto">
+              <div className="text-center">
+                <SteamEffect className="mx-auto mb-4" />
+                <h3 className="font-cartoon text-xl sm:text-2xl text-accent mb-2">Featured Dish</h3>
+                <p className="font-comic text-sm sm:text-base text-card-foreground">
+                  Authentic homestyle mutton prepared with love! 🍽️
+                </p>
+              </div>
+            </div>
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4 max-w-2xl mx-auto">
             <CartoonButton
               variant="hero"
               size="xl"
               onClick={() => scrollToSection('menu')}
-              fullWidth
+              className="w-full sm:w-auto sm:min-w-[200px] order-1"
               icon={<ChefHat className="w-6 h-6" />}
               iconPosition="left"
-              animation="bounce"
-              className="sm:w-auto"
             >
               Order Now! 🔥
             </CartoonButton>
             
-            <CartoonButton
-              variant="outline"
-              size="lg"
-              onClick={() => scrollToSection('about')}
-              fullWidth
-              icon={<ArrowRight className="w-5 h-5" />}
-              iconPosition="right"
-              className="sm:w-auto"
-            >
-              Our Story
-            </CartoonButton>
+            <Link to="/about">
+              <CartoonButton
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto sm:min-w-[180px] order-2"
+                icon={<ArrowRight className="w-5 h-5" />}
+                iconPosition="right"
+              >
+                Our Story
+              </CartoonButton>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-12 sm:py-16 md:py-20 bg-gradient-cream">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section id="about" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-cream">
+        <div className="container mx-auto px-6 sm:px-8 md:px-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <ComicPanel className="p-4 sm:p-6">
@@ -148,6 +161,21 @@ const Index = () => {
                     <span className="font-cartoon text-sm">Fresh Daily</span>
                   </div>
                 </div>
+                
+                {/* Learn More Button */}
+                <div className="mt-6 sm:mt-8 text-center md:text-left">
+                  <Link to="/about">
+                    <CartoonButton
+                      variant="spice"
+                      size="sm"
+                      className="text-sm"
+                      icon={<ArrowRight className="w-4 h-4" />}
+                      iconPosition="right"
+                    >
+                      Read Full Story
+                    </CartoonButton>
+                  </Link>
+                </div>
               </ComicPanel>
             </div>
             
@@ -167,222 +195,49 @@ const Index = () => {
       </section>
 
       {/* Menu Section */}
-      <section id="menu" className="py-12 sm:py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
+      <section id="menu" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-background">
+        <div className="container mx-auto px-6 sm:px-8 md:px-10">
+          <div className="text-center mb-16 sm:mb-20 md:mb-24">
             <h2 className="font-cartoon text-3xl sm:text-4xl md:text-5xl text-accent mb-4 sm:mb-6">Our Specialties</h2>
             <ComicPanel variant="speech" className="inline-block mx-4">
               <p className="font-comic text-base sm:text-lg">Cartoon-delicious dishes that'll blow your mind! 🤯</p>
             </ComicPanel>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <MenuCard
-              title="Spicy Mutton Curry"
-              description="Rich, thick gravy with tender mutton pieces that melt in your mouth! Extra spicy for the brave hearts! 🌶️"
-              image={curryCartoon}
-              price="₹299"
-              rating={4.9}
-              onAddToCart={() => handleAddToCart('Spicy Mutton Curry')}
-            />
-            
-            <MenuCard
-              title="Dum Biryani Feast"
-              description="Fragrant basmati rice with succulent mutton, slow-cooked to perfection! Rice grains that dance on your tongue! 🍚"
-              image={biryaniCartoon}
-              price="₹349"
-              rating={4.8}
-              onAddToCart={() => handleAddToCart('Dum Biryani Feast')}
-            />
-            
-            <MenuCard
-              title="Kaatil Special"
-              description="Our signature dish that's so good, it's literally killer! Secret recipe passed down generations! 😱"
-              image={curryCartoon}
-              price="₹399"
-              rating={5.0}
-              onAddToCart={() => handleAddToCart('Kaatil Special')}
-              className="sm:col-span-2 lg:col-span-1"
-            />
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              <MenuCard
+                title="KAATIL COMBO"
+                description="Korma + 4 Rumali Roti + Salad + Coke - The perfect combination that'll make your taste buds dance! Ultimate satisfaction guaranteed! 🔥🍽️"
+                image={curryCartoon}
+                price="₹299"
+                originalPrice="₹399"
+                rating={5.0}
+                onOrder={() => handleOrder('KAATIL COMBO (Korma + 4 Rumali Roti + Salad + Coke)')}
+              />
+            </div>
           </div>
           
           {/* View All Menu CTA */}
-          <div className="text-center mt-12 sm:mt-16">
-            <CartoonButton
-              variant="spice"
-              size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
-              iconPosition="right"
-              animation="wiggle"
-            >
-              View Full Menu
-            </CartoonButton>
-          </div>
-        </div>
-      </section>
-
-      {/* Button Showcase Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-cream">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="font-cartoon text-3xl sm:text-4xl md:text-5xl text-accent mb-4">Interactive Experience</h2>
-            <ComicPanel variant="speech" className="inline-block mx-4">
-              <p className="font-comic text-base sm:text-lg">Experience our enhanced button interactions! 🎆</p>
-            </ComicPanel>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {/* Primary Actions */}
-            <ComicPanel className="p-6 text-center space-y-4">
-              <h3 className="font-cartoon text-xl text-accent mb-4">Primary Actions</h3>
-              <div className="space-y-3">
-                <CartoonButton
-                  variant="hero"
-                  size="default"
-                  fullWidth
-                  animation="bounce"
-                >
-                  Hero Button
-                </CartoonButton>
-                <CartoonButton
-                  variant="success"
-                  size="default"
-                  fullWidth
-                  icon={<Heart className="w-4 h-4" />}
-                  iconPosition="left"
-                >
-                  Success
-                </CartoonButton>
-              </div>
-            </ComicPanel>
-
-            {/* Secondary Actions */}
-            <ComicPanel className="p-6 text-center space-y-4">
-              <h3 className="font-cartoon text-xl text-accent mb-4">Secondary</h3>
-              <div className="space-y-3">
-                <CartoonButton
-                  variant="spice"
-                  size="default"
-                  fullWidth
-                  animation="pulse"
-                >
-                  Spice Variant
-                </CartoonButton>
-                <CartoonButton
-                  variant="outline"
-                  size="default"
-                  fullWidth
-                >
-                  Outline Style
-                </CartoonButton>
-              </div>
-            </ComicPanel>
-
-            {/* Subtle Actions */}
-            <ComicPanel className="p-6 text-center space-y-4">
-              <h3 className="font-cartoon text-xl text-accent mb-4">Subtle</h3>
-              <div className="space-y-3">
-                <CartoonButton
-                  variant="soft"
-                  size="default"
-                  fullWidth
-                  animation="float"
-                >
-                  Soft Touch
-                </CartoonButton>
-                <CartoonButton
-                  variant="ghost"
-                  size="default"
-                  fullWidth
-                >
-                  Ghost Mode
-                </CartoonButton>
-              </div>
-            </ComicPanel>
-
-            {/* State Actions */}
-            <ComicPanel className="p-6 text-center space-y-4">
-              <h3 className="font-cartoon text-xl text-accent mb-4">States</h3>
-              <div className="space-y-3">
-                <CartoonButton
-                  variant="warning"
-                  size="default"
-                  fullWidth
-                  icon={<Clock className="w-4 h-4" />}
-                  iconPosition="left"
-                >
-                  Warning
-                </CartoonButton>
-                <CartoonButton
-                  variant="danger"
-                  size="default"
-                  fullWidth
-                >
-                  Danger
-                </CartoonButton>
-              </div>
-            </ComicPanel>
-          </div>
-
-          {/* Size Variations */}
-          <div className="mt-12 sm:mt-16">
-            <ComicPanel className="p-6">
-              <h3 className="font-cartoon text-2xl text-accent mb-6 text-center">Size Variations</h3>
-              <div className="flex flex-wrap items-center justify-center gap-4">
-                <CartoonButton variant="hero" size="xs">XS Button</CartoonButton>
-                <CartoonButton variant="hero" size="sm">Small</CartoonButton>
-                <CartoonButton variant="hero" size="default">Default</CartoonButton>
-                <CartoonButton variant="hero" size="lg">Large</CartoonButton>
-                <CartoonButton variant="hero" size="xl">Extra Large</CartoonButton>
-                <CartoonButton variant="hero" size="xxl" className="hidden sm:inline-flex">XXL</CartoonButton>
-              </div>
-            </ComicPanel>
-          </div>
-
-          {/* Interactive Features Demo */}
-          <div className="mt-12 sm:mt-16">
-            <ComicPanel className="p-6">
-              <h3 className="font-cartoon text-2xl text-accent mb-6 text-center">Special Features</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <CartoonButton
-                  variant="hero"
-                  size="lg"
-                  fullWidth
-                  loading={false}
-                  icon={<Star className="w-5 h-5" />}
-                  iconPosition="left"
-                  rounded
-                >
-                  Rounded Style
-                </CartoonButton>
-                
-                <CartoonButton
-                  variant="spice"
-                  size="lg"
-                  fullWidth
-                  icon={<Users className="w-5 h-5" />}
-                  iconPosition="right"
-                >
-                  Icon Right
-                </CartoonButton>
-                
-                <CartoonButton
-                  variant="outline"
-                  size="lg"
-                  fullWidth
-                  animation="wiggle"
-                >
-                  Animated Hover
-                </CartoonButton>
-              </div>
-            </ComicPanel>
+          <div className="text-center mt-16 sm:mt-20 md:mt-24">
+            <Link to="/menu">
+              <CartoonButton
+                variant="spice"
+                size="lg"
+                icon={<ArrowRight className="w-5 h-5" />}
+                iconPosition="right"
+                animation="wiggle"
+              >
+                View Full Menu
+              </CartoonButton>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-spice">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-spice">
+        <div className="container mx-auto px-6 sm:px-8 md:px-10">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="font-cartoon text-3xl sm:text-4xl md:text-5xl text-accent mb-4">Why Choose Us?</h2>
             <p className="font-comic text-base sm:text-lg text-card-foreground max-w-2xl mx-auto">
@@ -410,8 +265,8 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-hero">
+        <div className="container mx-auto px-6 sm:px-8 md:px-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center text-center md:text-left">
             <div className="order-2 md:order-1">
               <img 
@@ -436,11 +291,11 @@ const Index = () => {
               </ComicPanel>
               
               <div className="space-y-4 sm:space-y-6">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start max-w-md mx-auto md:mx-0">
                   <CartoonButton 
                     variant="hero" 
                     size="lg"
-                    className="text-lg sm:text-xl w-full sm:w-auto"
+                    className="text-lg sm:text-xl w-full sm:w-auto sm:min-w-[180px]"
                     onClick={() => scrollToSection('menu')}
                   >
                     Order Now! 🛒
@@ -449,7 +304,7 @@ const Index = () => {
                   <CartoonButton 
                     variant="outline" 
                     size="lg"
-                    className="text-lg sm:text-xl w-full sm:w-auto"
+                    className="text-lg sm:text-xl w-full sm:w-auto sm:min-w-[160px]"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Call Now
@@ -476,8 +331,172 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Location & Contact Section */}
+      <section id="location" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-cream">
+        <div className="container mx-auto px-6 sm:px-8 md:px-10">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="font-cartoon text-3xl sm:text-4xl md:text-5xl text-accent mb-4 sm:mb-6">
+              Visit Our Kitchen! 🏠
+            </h2>
+            <ComicPanel variant="speech" className="inline-block mx-4">
+              <p className="font-comic text-base sm:text-lg">
+                Come taste the magic at our location! 📍✨
+              </p>
+            </ComicPanel>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            {/* Contact Information */}
+            <div className="order-2 lg:order-1">
+              <ComicPanel className="p-6 sm:p-8 h-full">
+                <div className="flex items-center gap-3 mb-6">
+                  <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  <h3 className="font-cartoon text-2xl sm:text-3xl text-accent">Find Us Here!</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h4 className="font-cartoon text-lg text-accent mb-2">Our Address</h4>
+                      <p className="font-comic text-base text-card-foreground leading-relaxed">
+                        Shop No. 15, Ground Floor,<br/>
+                        Shivaji Nagar, Bandra West,<br/>
+                        Mumbai - 400050, Maharashtra
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-spice-orange rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-cartoon text-lg text-accent mb-2">Call Us</h4>
+                      <div className="space-y-1">
+                        <a href="tel:+919876543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                          📱 +91 98765 43210
+                        </a>
+                        <br/>
+                        <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                          ☎️ 022 2654 3210
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-spice-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-cartoon text-lg text-accent mb-2">Opening Hours</h4>
+                      <div className="font-comic text-base text-card-foreground">
+                        <p>Monday - Sunday</p>
+                        <p className="text-primary font-bold">11:00 AM - 11:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Directions Button */}
+                  <div className="pt-4">
+                    <a 
+                      href="https://maps.google.com/?q=Shivaji+Nagar+Bandra+West+Mumbai+Kaatil+Mutton"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <CartoonButton
+                        variant="hero"
+                        size="lg"
+                        className="w-full"
+                        icon={<Navigation className="w-5 h-5" />}
+                        iconPosition="left"
+                      >
+                        Get Directions 🧭
+                      </CartoonButton>
+                    </a>
+                  </div>
+                </div>
+              </ComicPanel>
+            </div>
+            
+            {/* Embedded Map */}
+            <div className="order-1 lg:order-2">
+              <ComicPanel className="p-4 sm:p-6 h-full">
+                <div className="relative w-full h-80 sm:h-96 lg:h-full min-h-[400px] rounded-xl overflow-hidden border-4 border-accent/20">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2234567890123!2d72.8261!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c7b123456%3A0x123456789abcdef!2sShivaji%20Nagar%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra%20400050!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Kaatil Mutton Location - Bandra West, Mumbai"
+                    className="rounded-lg"
+                  />
+                  
+                  {/* Map Overlay */}
+                  <div className="absolute top-4 left-4 speech-bubble bg-primary text-primary-foreground">
+                    <span className="font-cartoon text-sm">We're Here! 📍</span>
+                  </div>
+                </div>
+                
+                {/* Map Caption */}
+                <div className="mt-4 text-center">
+                  <p className="font-comic text-sm text-card-foreground">
+                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - Bandra West, Mumbai
+                  </p>
+                  <p className="font-comic text-xs text-card-foreground/70 mt-1">
+                    Easy access by train, bus, or car! 🚊🚌🚗
+                  </p>
+                </div>
+              </ComicPanel>
+            </div>
+          </div>
+          
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 sm:mt-16">
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                <Truck className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
+              </div>
+              <div className="font-cartoon text-lg sm:text-xl text-primary mb-1">5 KM</div>
+              <div className="font-comic text-xs sm:text-sm text-card-foreground">Delivery Radius</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-spice-orange rounded-full flex items-center justify-center mx-auto mb-3">
+                <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
+              </div>
+              <div className="font-cartoon text-lg sm:text-xl text-primary mb-1">30 MIN</div>
+              <div className="font-comic text-xs sm:text-sm text-card-foreground">Average Delivery</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-spice-yellow rounded-full flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
+              </div>
+              <div className="font-cartoon text-lg sm:text-xl text-primary mb-1">PRIME</div>
+              <div className="font-comic text-xs sm:text-sm text-card-foreground">Location</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                <Users className="w-6 h-6 sm:w-7 sm:h-7 text-secondary-foreground" />
+              </div>
+              <div className="font-cartoon text-lg sm:text-xl text-primary mb-1">24/7</div>
+              <div className="font-comic text-xs sm:text-sm text-card-foreground">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-accent text-accent-foreground py-8 sm:py-12">
+      <footer className="bg-accent text-accent-foreground py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center sm:text-left">

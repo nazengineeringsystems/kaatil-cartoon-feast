@@ -15,7 +15,6 @@
     /* Kaatil Red - Fiery and Bold */
     --primary: 5 85% 55%;
     --primary-foreground: 45 15% 96%;
-    --primary-glow: 5 90% 65%;
 
     /* Creamy Beige */
     --secondary: 45 35% 85%;
@@ -57,7 +56,6 @@
     /* Comic Book Effects */
     --shadow-cartoon: 4px 4px 0px hsl(var(--accent));
     --shadow-pop: 6px 6px 0px hsl(var(--primary)), 8px 8px 0px hsl(var(--accent));
-    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.5);
 
     /* Animation Timing */
     --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -160,14 +158,7 @@
     background: var(--gradient-cream);
   }
 
-  /* Cartoon Text Effects */
-  .text-bouncy {
-    animation: bounce-text 1s ease-in-out infinite alternate;
-  }
 
-  .text-glow {
-    text-shadow: 0 0 10px hsl(var(--primary-glow));
-  }
 
   /* Steam Animation */
   .steam-line {
@@ -175,10 +166,6 @@
     animation: steam 2s ease-in-out infinite;
   }
 
-  /* Wobble Effect */
-  .wobble {
-    animation: wobble 2s ease-in-out infinite;
-  }
 }
 
 @layer utilities {
@@ -204,9 +191,6 @@
     box-shadow: var(--shadow-pop);
   }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
 
   /* Mobile-first responsive utilities */
   .line-clamp-3 {
@@ -236,8 +220,6 @@
 
   /* Mobile-optimized animations */
   @media (prefers-reduced-motion: reduce) {
-    .text-bouncy,
-    .wobble,
     .animate-bounce,
     .animate-pulse {
       animation: none;
@@ -248,24 +230,9 @@
       transition: none;
     }
   }
-
-  /* Mobile viewport fixes */
-  @media screen and (max-width: 768px) {
-    .text-bouncy {
-      animation-duration: 2s;
-    }
-    
-    .wobble {
-      animation-duration: 3s;
-    }
-  }
 }
 
 /* Keyframe Animations */
-@keyframes bounce-text {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-5px); }
-}
 
 @keyframes steam {
   0% { 
@@ -282,19 +249,9 @@
   }
 }
 
-@keyframes wobble {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(1deg); }
-  75% { transform: rotate(-1deg); }
-}
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-2px); }
-  75% { transform: translateX(2px); }
-}

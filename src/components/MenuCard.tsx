@@ -2,19 +2,20 @@ import { ReactNode } from "react";
 import { ComicPanel } from "./ComicPanel";
 import { SteamEffect } from "./SteamEffect";
 import { CartoonButton } from "./CartoonButton";
-import { ShoppingCart, Star } from "lucide-react";
+import { Phone, Star } from "lucide-react";
 
 interface MenuCardProps {
   title: string;
   description: string;
   image: string;
   price?: string;
+  originalPrice?: string;
   rating?: number;
   className?: string;
-  onAddToCart?: () => void;
+  onOrder?: () => void;
 }
 
-export const MenuCard = ({ title, description, image, price, rating = 4.8, className, onAddToCart }: MenuCardProps) => {
+export const MenuCard = ({ title, description, image, price, originalPrice, rating = 4.8, className, onOrder }: MenuCardProps) => {
   return (
     <ComicPanel className={`relative overflow-hidden hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer group ${className}`}>
       <div className="relative">
@@ -39,21 +40,33 @@ export const MenuCard = ({ title, description, image, price, rating = 4.8, class
         
         <div className="flex items-center justify-between gap-3 pt-2">
           {price && (
-            <div className="font-cartoon text-lg sm:text-xl text-primary font-bold bg-spice-yellow px-3 py-1 rounded-full shadow-cartoon">
-              {price}
+            <div className="flex flex-col items-start gap-1">
+              {originalPrice && (
+                <div className="font-cartoon text-sm text-muted-foreground line-through">
+                  {originalPrice}
+                </div>
+              )}
+              <div className="font-cartoon text-lg sm:text-xl text-primary font-bold bg-spice-yellow px-3 py-1 rounded-full shadow-cartoon">
+                {price}
+                {originalPrice && (
+                  <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-1 rounded-full">
+                    OFFER!
+                  </span>
+                )}
+              </div>
             </div>
           )}
           
           <CartoonButton
-            variant="success"
+            variant="hero"
             size="sm"
-            onClick={onAddToCart}
-            icon={<ShoppingCart className="w-4 h-4" />}
+            onClick={onOrder}
+            icon={<Phone className="w-4 h-4" />}
             iconPosition="left"
             className="flex-shrink-0"
-            animation="pulse"
+            animation="wiggle"
           >
-            Add
+            Order Now
           </CartoonButton>
         </div>
       </div>
