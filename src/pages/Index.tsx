@@ -200,7 +200,7 @@ const Index = () => {
           <div className="text-center mb-16 sm:mb-20 md:mb-24">
             <h2 className="font-cartoon text-3xl sm:text-4xl md:text-5xl text-accent mb-4 sm:mb-6">Our Specialties</h2>
             <ComicPanel variant="speech" className="inline-block mx-4">
-              <p className="font-comic text-base sm:text-lg">Cartoon-delicious dishes that'll blow your mind! 🤯</p>
+              <p className="font-comic text-base sm:text-lg">Delicious dishes that'll blow your mind! 🤯</p>
             </ComicPanel>
           </div>
           
@@ -376,8 +376,8 @@ const Index = () => {
                     <div>
                       <h4 className="font-cartoon text-lg text-accent mb-2">Call Us</h4>
                       <div className="space-y-1">
-                        <a href="tel:+919876543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
-                          📱 +91 98765 43210
+                        <a href="tel:+919310645115" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                          📱 +91 93106 45115
                         </a>
                         <br/>
                         <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
@@ -435,7 +435,7 @@ const Index = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Kaatil Mutton Location - Bandra West, Mumbai"
+                    title="Kaatil Mutton Location - New Delhi, India"
                     className="rounded-lg"
                   />
                   
@@ -448,7 +448,7 @@ const Index = () => {
                 {/* Map Caption */}
                 <div className="mt-4 text-center">
                   <p className="font-comic text-sm text-card-foreground">
-                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - Bandra West, Mumbai
+                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - New Delhi, India
                   </p>
                   <p className="font-comic text-xs text-card-foreground/70 mt-1">
                     Easy access by train, bus, or car! 🚊🚌🚗
@@ -519,25 +519,25 @@ const Index = () => {
                   👨‍🍳 Meet Our Founder
                 </Link>
                 <a 
-                  href="tel:+919876543210" 
+                  href="tel:+919310645115" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📱 +91 9876543210
+                  📱 +91 93106 45115
                 </a>
                 <a 
-                  href="mailto:order@kaatilmutton.com" 
+                  href="mailto:kaatilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 order@kaatilmutton.com
+                  📧 kaatilmutton@gmail.com
                 </a>
-                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Mumbai, India</p>
+                <p className="flex items-center justify-center sm:justify-start gap-2">📍 New Delhi, India</p>
               </div>
             </div>
             
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h3 className="font-cartoon text-lg sm:text-xl mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
-                {['Facebook', 'Instagram', 'Twitter'].map((social) => (
+                {['Facebook', 'Instagram'].map((social) => (
                   <CartoonButton key={social} variant="outline" size="xs" className="text-xs">
                     {social}
                   </CartoonButton>
@@ -560,7 +560,7 @@ const Index = () => {
           
           <div className="border-t border-accent-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="font-comic text-sm sm:text-base">
-              © 2024 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
+              © 2025 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
             </p>
           </div>
         </div>
