@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kaatil Mutton Cartoon Design System */
+
+@layer base {
+  :root {
+    /* Brand Colors - Cartoon Style */
+    --background: 45 15% 96%;
+    --foreground: 20 15% 15%;
+
+    /* Kaatil Red - Fiery and Bold */
+    --primary: 5 85% 55%;
+    --primary-foreground: 45 15% 96%;
+    --primary-glow: 5 90% 65%;
+
+    /* Creamy Beige */
+    --secondary: 45 35% 85%;
+    --secondary-foreground: 20 15% 15%;
+
+    /* Deep Charcoal Accent */
+    --accent: 20 15% 25%;
+    --accent-foreground: 45 35% 85%;
+
+    /* Spice Colors */
+    --spice-orange: 25 95% 60%;
+    --spice-yellow: 50 95% 65%;
+
+    /* Cartoon UI Colors */
+    --card: 45 25% 92%;
+    --card-foreground: 20 15% 15%;
+    --card-border: 20 15% 25%;
+
+    --muted: 45 20% 88%;
+    --muted-foreground: 20 10% 45%;
+
+    --popover: 45 25% 94%;
+    --popover-foreground: 20 15% 15%;
+
+    --border: 20 15% 25%;
+    --input: 45 25% 92%;
+    --ring: 5 85% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 15% 96%;
+
+    --radius: 1rem;
+
+    /* Cartoon Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--spice-orange)) 100%);
+    --gradient-spice: linear-gradient(45deg, hsl(var(--spice-yellow)) 0%, hsl(var(--spice-orange)) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--card)) 100%);
+
+    /* Comic Book Effects */
+    --shadow-cartoon: 4px 4px 0px hsl(var(--accent));
+    --shadow-pop: 6px 6px 0px hsl(var(--primary)), 8px 8px 0px hsl(var(--accent));
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.5);
+
+    /* Animation Timing */
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-cartoon: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .dark {
+    --background: 20 15% 12%;
+    --foreground: 45 15% 92%;
+    --primary: 5 85% 60%;
+    --primary-foreground: 20 15% 12%;
+    --secondary: 20 15% 18%;
+    --secondary-foreground: 45 15% 92%;
+    --accent: 45 15% 85%;
+    --accent-foreground: 20 15% 15%;
+    --card: 20 15% 15%;
+    --card-foreground: 45 15% 92%;
+    --border: 45 15% 25%;
+    --input: 20 15% 18%;
+    --muted: 20 15% 20%;
+    --muted-foreground: 45 10% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-comic;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Comic Book Typography */
+  .font-cartoon {
+    font-family: 'Fredoka', cursive;
+    font-weight: 700;
+  }
+
+  .font-comic {
+    font-family: 'Comic Neue', cursive;
+  }
+
+  /* Cartoon Button Styles */
+  .btn-cartoon {
+    @apply relative font-cartoon font-bold px-6 py-3 rounded-xl border-4 border-accent text-accent-foreground;
+    background: var(--gradient-hero);
+    box-shadow: var(--shadow-cartoon);
+    transform: translate(0, 0);
+    transition: all 0.2s var(--transition-cartoon);
+  }
+
+  .btn-cartoon:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-pop);
+  }
+
+  .btn-cartoon:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px hsl(var(--accent));
+  }
+
+  /* Speech Bubble */
+  .speech-bubble {
+    @apply relative bg-card border-4 border-accent rounded-2xl p-4;
+    box-shadow: var(--shadow-cartoon);
+  }
+
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px;
+    border-color: hsl(var(--card)) transparent transparent transparent;
+  }
+
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 16px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 16px 0 16px;
+    border-color: hsl(var(--accent)) transparent transparent transparent;
+  }
+
+  /* Comic Panel Effect */
+  .comic-panel {
+    @apply bg-card border-4 border-accent rounded-2xl p-6;
+    box-shadow: var(--shadow-cartoon);
+    background: var(--gradient-cream);
+  }
+
+  /* Cartoon Text Effects */
+  .text-bouncy {
+    animation: bounce-text 1s ease-in-out infinite alternate;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--primary-glow));
+  }
+
+  /* Steam Animation */
+  .steam-line {
+    @apply absolute opacity-60;
+    animation: steam 2s ease-in-out infinite;
+  }
+
+  /* Wobble Effect */
+  .wobble {
+    animation: wobble 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom Gradients */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-spice {
+    background: var(--gradient-spice);
+  }
+
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
+  }
+
+  /* Comic Effects */
+  .shadow-cartoon {
+    box-shadow: var(--shadow-cartoon);
+  }
+
+  .shadow-pop {
+    box-shadow: var(--shadow-pop);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes bounce-text {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-5px); }
+}
+
+@keyframes steam {
+  0% { 
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.1);
+    opacity: 0.8;
+  }
+  100% { 
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
