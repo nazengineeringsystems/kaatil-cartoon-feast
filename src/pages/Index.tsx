@@ -108,7 +108,7 @@ const Index = () => {
             <CartoonButton
               variant="hero"
               size="xl"
-              onClick={() => scrollToSection('menu')}
+              onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
               className="w-full sm:w-auto sm:min-w-[200px] order-1"
               icon={<ChefHat className="w-6 h-6" />}
               iconPosition="left"
@@ -207,13 +207,13 @@ const Index = () => {
           <div className="flex justify-center">
             <div className="w-full max-w-md">
               <MenuCard
-                title="KAATIL COMBO"
-                description="Korma + 4 Rumali Roti + Salad + Coke - The perfect combination that'll make your taste buds dance! Ultimate satisfaction guaranteed! 🔥🍽️"
-                image={curryCartoon}
-                price="₹299"
-                originalPrice="₹399"
-                rating={5.0}
-                onOrder={() => handleOrder('KAATIL COMBO (Korma + 4 Rumali Roti + Salad + Coke)')}
+              title="KAATIL COMBO"
+              description="Korma + 4 Rumali Roti + Salad + Coke - The perfect combination that'll make your taste buds dance! Ultimate satisfaction guaranteed! 🔥🍽️"
+              image={curryCartoon}
+              price="₹299"
+              originalPrice="₹399"
+              rating={5.0}
+              onOrder={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KAATIL%20COMBO%22%20offer", "_blank")}
               />
             </div>
           </div>
@@ -292,23 +292,24 @@ const Index = () => {
               
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start max-w-md mx-auto md:mx-0">
-                  <CartoonButton 
+                    <CartoonButton 
                     variant="hero" 
                     size="lg"
                     className="text-lg sm:text-xl w-full sm:w-auto sm:min-w-[180px]"
-                    onClick={() => scrollToSection('menu')}
-                  >
+                    onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
+                    >
                     Order Now! 🛒
-                  </CartoonButton>
+                    </CartoonButton>
                   
-                  <CartoonButton 
+                    <CartoonButton 
                     variant="outline" 
                     size="lg"
                     className="text-lg sm:text-xl w-full sm:w-auto sm:min-w-[160px]"
-                  >
+                    onClick={() => window.location.href = "tel:+919310645115"}
+                    >
                     <Phone className="w-5 h-5 mr-2" />
                     Call Now
-                  </CartoonButton>
+                    </CartoonButton>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 text-primary-foreground">
@@ -362,9 +363,9 @@ const Index = () => {
                     <div>
                       <h4 className="font-cartoon text-lg text-accent mb-2">Our Address</h4>
                       <p className="font-comic text-base text-card-foreground leading-relaxed">
-                        Shop No. 15, Ground Floor,<br/>
-                        Shivaji Nagar, Bandra West,<br/>
-                        Mumbai - 400050, Maharashtra
+                        Gali No 4 and 5, KH. No. 5/3,<br/>
+                        Sangam Vihar, Wazirabad,<br/>
+                        Delhi - 110084, India.
                       </p>
                     </div>
                   </div>
@@ -380,9 +381,9 @@ const Index = () => {
                           📱 +91 93106 45115
                         </a>
                         <br/>
-                        <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                        {/* <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
                           ☎️ 022 2654 3210
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
@@ -403,7 +404,7 @@ const Index = () => {
                   {/* Directions Button */}
                   <div className="pt-4">
                     <a 
-                      href="https://maps.google.com/?q=Shivaji+Nagar+Bandra+West+Mumbai+Kaatil+Mutton"
+                      href="https://maps.app.goo.gl/twZNsM8kaZnb8JWZ9"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block"
@@ -427,21 +428,21 @@ const Index = () => {
             <div className="order-1 lg:order-2">
               <ComicPanel className="p-4 sm:p-6 h-full">
                 <div className="relative w-full h-80 sm:h-96 lg:h-full min-h-[400px] rounded-xl overflow-hidden border-4 border-accent/20">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2234567890123!2d72.8261!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c7b123456%3A0x123456789abcdef!2sShivaji%20Nagar%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra%20400050!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Kaatil Mutton Location - New Delhi, India"
-                    className="rounded-lg"
+                  <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.7132107638513!2d77.212281775506!3d28.728115579733686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cff4e96b1f937%3A0x792669c17b3a725a!2sNaz%20Engineering%20Systems!5e0!3m2!1sen!2sin!4v1756298588551!5m2!1sen!2sin" 
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Kaatil Mutton Location - New Delhi, India"
+                  className="absolute inset-0"
                   />
                   
                   {/* Map Overlay */}
-                  <div className="absolute top-4 left-4 speech-bubble bg-primary text-primary-foreground">
-                    <span className="font-cartoon text-sm">We're Here! 📍</span>
+                  <div className="absolute top-4 left-4 speech-bubble bg-primary text-primary-foreground z-10">
+                  <span className="font-cartoon text-sm">We're Here! 📍</span>
                   </div>
                 </div>
                 
@@ -546,14 +547,19 @@ const Index = () => {
               
               {/* Quick Order Button */}
               <div className="mt-6">
-                <CartoonButton 
-                  variant="hero" 
-                  size="sm" 
-                  className="w-full sm:w-auto"
-                  onClick={() => scrollToSection('menu')}
+                <a 
+                  href="https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  🔥 Quick Order
-                </CartoonButton>
+                  <CartoonButton 
+                    variant="hero" 
+                    size="sm" 
+                    className="w-full sm:w-auto"
+                  >
+                    💬Quick Order
+                  </CartoonButton>
+                </a>
               </div>
             </div>
           </div>

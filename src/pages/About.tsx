@@ -159,7 +159,7 @@ const About = () => {
               
               <div className="space-y-3">
                 {[
-                  { icon: Heart, text: "Made with Pure Love"},
+                  { icon: Heart, text: "Made with Pure Ghee & Love"},
                   { icon: Home, text: "Homestyle Authentic Recipes"},
                   { icon: Award, text: "Premium Quality Ingredients"}
                 ].map((item, index) => (
@@ -349,7 +349,7 @@ const About = () => {
           </ComicPanel>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md mx-auto">
-            <Link to="/menu">
+            <Link to="https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something." target="_blank" rel="noopener noreferrer" className="block w-full">
               <CartoonButton 
                 variant="hero" 
                 size="lg"
@@ -480,7 +480,7 @@ const About = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Kaatil Mutton Location - Bandra West, Mumbai"
+                    title="Kaatil Mutton Location - Sangam Vihar, Delhi - 84"
                     className="rounded-lg"
                   />
                   
@@ -493,7 +493,7 @@ const About = () => {
                 {/* Map Caption */}
                 <div className="mt-4 text-center">
                   <p className="font-comic text-sm text-card-foreground">
-                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - Bandra West, Mumbai
+                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - Sangam Vihar, Delhi - 84
                   </p>
                   <p className="font-comic text-xs text-card-foreground/70 mt-1">
                     Easy access by train, bus, or car! 🚊🚌🚗
@@ -556,7 +556,7 @@ const About = () => {
               
               {/* Quick Order Button */}
               <div className="mt-6">
-                <Link to="https://wa.me/919310645115" target="_blank" rel="noopener noreferrer" className="block">
+                <Link to="https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something." target="_blank" rel="noopener noreferrer" className="block">
                   <CartoonButton 
                     variant="hero" 
                     size="sm" 
