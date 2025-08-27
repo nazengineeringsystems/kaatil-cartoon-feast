@@ -14,7 +14,7 @@ import kitchenScene from "@/assets/kitchen-scene.webp";
 import biryaniCartoon from "@/assets/biryani-cartoon.webp";
 import curryCartoon from "@/assets/curry-cartoon.webp";
 import happyCustomer from "@/assets/happy-customer.webp";
-import goatMascot from "@/assets/goat-mascot.webp";
+import goatMascot from "@/assets/logo.jpg";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -31,7 +31,7 @@ const Index = () => {
 
   const handleOrder = (itemName: string) => {
     // Open phone dialer for direct ordering
-    window.location.href = `tel:+919876543210`;
+    window.location.href = `tel:+919310645115`;
     
     // Show confirmation toast
     toast({
@@ -73,7 +73,7 @@ const Index = () => {
             <img 
               src={goatMascot} 
               alt="Kaatil Mutton Mascot" 
-              className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 wobble"
+              className=" h-16 sm:h-20 md:h-24 wobble"
             />
           </div>
           

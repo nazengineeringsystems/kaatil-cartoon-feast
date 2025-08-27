@@ -85,18 +85,16 @@ const About = () => {
                 
                 <div className="space-y-4 sm:space-y-6">
                   <p className="font-comic text-base sm:text-lg text-card-foreground leading-relaxed">
-                    It all started in a small Mumbai kitchen with a <span className="text-primary font-bold">passionate dream</span> - 
+                    It all started in a small Delhi kitchen with a <span className="text-primary font-bold">passionate dream</span> - 
                     to bring authentic homestyle mutton to food lovers everywhere! 🏠✨
                   </p>
                   
                   <p className="font-comic text-base sm:text-lg text-card-foreground leading-relaxed">
-                    Our founder grew up watching his grandmother create <span className="text-spice-orange font-bold">magical flavors</span> 
-                    with simple ingredients and lots of love. Those precious recipes became the foundation of Kaatil Mutton!
+                    Our founder grew up watching his grandmother create <span className="text-spice-orange font-bold">magical flavors</span> with simple ingredients and lots of love. Those precious recipes became the foundation of Kaatil Mutton!
                   </p>
                   
                   <p className="font-comic text-base sm:text-lg text-card-foreground leading-relaxed">
-                    Today, we're proud to carry on that tradition, serving <span className="text-secondary font-bold">10,000+ happy customers</span> 
-                    who have fallen in love with our killer combinations! 💪
+                    Today, we're proud to carry on that tradition, serving <span className="text-spice-orange font-bold">10,000+ happy customers</span> who have fallen in love with our killer combinations! 💪
                   </p>
                 </div>
                 
@@ -161,9 +159,9 @@ const About = () => {
               
               <div className="space-y-3">
                 {[
-                  { icon: Heart, text: "Made with Pure Love" },
-                  { icon: Home, text: "Homestyle Authentic Recipes" },
-                  { icon: Award, text: "Premium Quality Ingredients" }
+                  { icon: Heart, text: "Made with Pure Love"},
+                  { icon: Home, text: "Homestyle Authentic Recipes"},
+                  { icon: Award, text: "Premium Quality Ingredients"}
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3 justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
@@ -182,13 +180,13 @@ const About = () => {
               <h3 className="font-cartoon text-xl sm:text-2xl md:text-3xl text-accent mb-4">Our Vision</h3>
               
               <p className="font-comic text-base sm:text-lg text-card-foreground leading-relaxed mb-6">
-                To become <span className="text-spice-orange font-bold">Mumbai's favorite mutton destination</span> and expand our 
+                To become <span className="text-spice-orange font-bold">Delhi's favorite mutton destination</span> and expand our 
                 killer flavors across India, one satisfied customer at a time!
               </p>
               
               <div className="space-y-3">
                 {[
-                  { icon: Star, text: "Mumbai's #1 Mutton Brand" },
+                  { icon: Star, text: "Delhi's #1 Mutton Brand" },
                   { icon: Users, text: "Growing Happy Community" },
                   { icon: Zap, text: "Innovation in Every Dish" }
                 ].map((item, index) => (
@@ -409,9 +407,9 @@ const About = () => {
                     <div>
                       <h4 className="font-cartoon text-lg text-accent mb-2">Our Address</h4>
                       <p className="font-comic text-base text-card-foreground leading-relaxed">
-                        Shop No. 15, Ground Floor,<br/>
-                        Shivaji Nagar, Bandra West,<br/>
-                        Mumbai - 400050, Maharashtra
+                        Gali No 4 and 5, KH. No. 5/3,<br/>
+                        Sangam Vihar, Wazirabad,<br/>
+                        Delhi - 110084, India
                       </p>
                     </div>
                   </div>
@@ -426,10 +424,10 @@ const About = () => {
                         <a href="tel:+919876543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
                           📱 +91 98765 43210
                         </a>
-                        <br/>
+                        {/* <br/>
                         <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
                           ☎️ 022 2654 3210
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
@@ -531,25 +529,25 @@ const About = () => {
                   👨‍🍳 Meet Our Founder
                 </Link>
                 <a 
-                  href="tel:+919876543210" 
+                  href="tel:+919310645115" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📱 +91 9876543210
+                  📱 +91 93106 45115
                 </a>
                 <a 
-                  href="mailto:order@kaatilmutton.com" 
+                  href="mailto:kaatilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 order@kaatilmutton.com
+                  📧 kaatilmutton@gmail.com
                 </a>
-                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Mumbai, India</p>
+                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Delhi, India</p>
               </div>
             </div>
             
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h3 className="font-cartoon text-lg sm:text-xl mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
-                {['Facebook', 'Instagram', 'Twitter'].map((social) => (
+                {['Facebook', 'Instagram',].map((social) => (
                   <CartoonButton key={social} variant="outline" size="xs" className="text-xs">
                     {social}
                   </CartoonButton>
@@ -558,7 +556,7 @@ const About = () => {
               
               {/* Quick Order Button */}
               <div className="mt-6">
-                <Link to="/menu">
+                <Link to="https://wa.me/919310645115" target="_blank" rel="noopener noreferrer" className="block">
                   <CartoonButton 
                     variant="hero" 
                     size="sm" 
