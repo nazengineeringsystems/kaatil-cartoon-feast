@@ -72,15 +72,15 @@ const Index = () => {
           <div className="flex justify-center mb-6 sm:mb-8">
             <img 
               src={goatMascot} 
-              alt="Kaatil Mutton Mascot" 
+              alt="Katil Mutton Logo" 
               className=" h-16 sm:h-20 md:h-24 wobble"
             />
           </div>
           
           {/* Main Title */}
           <h1 className="font-cartoon text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-foreground mb-4 sm:mb-6 text-glow leading-tight">
-            <span className="block">KAATIL</span>
-            <span className="block text-spice-yellow text-bouncy mt-2">MUTTON</span>
+            <span className="block text-spice-yellow text-bouncy mt-2">KATIL</span>
+            <span className="block ">MUTTON</span>
           </h1>
           
           {/* Tagline */}
@@ -207,13 +207,13 @@ const Index = () => {
           <div className="flex justify-center">
             <div className="w-full max-w-md">
               <MenuCard
-              title="KAATIL COMBO"
+              title="KATIL COMBO"
               description="Korma + 4 Rumali Roti + Salad + Coke - The perfect combination that'll make your taste buds dance! Ultimate satisfaction guaranteed! 🔥🍽️"
               image={curryCartoon}
               price="₹299"
               originalPrice="₹399"
               rating={5.0}
-              onOrder={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KAATIL%20COMBO%22%20offer", "_blank")}
+              onOrder={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
               />
             </div>
           </div>
@@ -226,7 +226,6 @@ const Index = () => {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 iconPosition="right"
-                animation="wiggle"
               >
                 View Full Menu
               </CartoonButton>
@@ -249,7 +248,7 @@ const Index = () => {
             {[
               { icon: Home, title: "Homestyle Cooking", desc: "Just like mama's!", color: "bg-spice-yellow" },
               { icon: Award, title: "Premium Quality", desc: "Only the finest ingredients!", color: "bg-spice-orange" },
-              { icon: Users, title: "Happy Customers", desc: "10,000+ satisfied foodies!", color: "bg-primary" },
+              { icon: Users, title: "Happy Customers", desc: "100+ satisfied foodies!", color: "bg-primary" },
               { icon: Truck, title: "Fast Delivery", desc: "Hot & fresh to your door!", color: "bg-secondary" }
             ].map((item, index) => (
               <ComicPanel key={index} className="text-center hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer p-4 sm:p-6">
@@ -319,7 +318,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Users className="w-5 h-5" />
-                    <span className="font-comic text-sm sm:text-base">10k+ Orders</span>
+                    <span className="font-comic text-sm sm:text-base">100+ Orders</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-5 h-5" />
@@ -502,8 +501,8 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-3 mb-4">
-                <img src={goatMascot} alt="Logo" className="w-10 sm:w-12 h-10 sm:h-12" />
-                <span className="font-cartoon text-xl sm:text-2xl">Kaatil Mutton</span>
+                <img src={goatMascot} alt="Logo" className="h-10 sm:h-12" />
+                <span className="font-cartoon text-xl sm:text-2xl">Katil Mutton</span>
               </div>
               <p className="font-comic text-sm sm:text-base leading-relaxed">
                 Bringing you the best homestyle mutton dishes with killer flavors!
@@ -526,22 +525,32 @@ const Index = () => {
                   📱 +91 93106 45115
                 </a>
                 <a 
-                  href="mailto:kaatilmutton@gmail.com" 
+                  href="mailto:customercare.katilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 kaatilmutton@gmail.com
+                  📧 customercare.katilmutton@gmail.com
                 </a>
-                <p className="flex items-center justify-center sm:justify-start gap-2">📍 New Delhi, India</p>
+                <p className="flex items-center justify-center sm:justify-start gap-2">📍Sangam Vihar, Delhi - 84</p>
               </div>
             </div>
             
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h3 className="font-cartoon text-lg sm:text-xl mb-4">Follow Us</h3>
-              <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
-                {['Facebook', 'Instagram'].map((social) => (
-                  <CartoonButton key={social} variant="outline" size="xs" className="text-xs">
-                    {social}
+                <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
+                {[
+                  {name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61579984918850'},
+                  {name: 'Instagram', url: 'https://www.instagram.com/katilmutton/'}
+                ].map((social) => (
+                  <a 
+                  key={social.name} 
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <CartoonButton variant="outline" size="xs" className="text-xs">
+                    {social.name}
                   </CartoonButton>
+                  </a>
                 ))}
               </div>
               
@@ -566,7 +575,7 @@ const Index = () => {
           
           <div className="border-t border-accent-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="font-comic text-sm sm:text-base">
-              © 2025 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
+              © 2025 Katil Mutton. All rights reserved. Made with ❤️ and spices!
             </p>
           </div>
         </div>

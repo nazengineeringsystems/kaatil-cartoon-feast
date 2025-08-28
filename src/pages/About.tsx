@@ -52,14 +52,14 @@ const About = () => {
             <div className="flex justify-center mb-4 sm:mb-6">
               <img 
                 src={goatMascot} 
-                alt="Kaatil Mutton Mascot" 
+                alt="Katil Mutton Logo" 
                 className=" h-16 sm:h-20 md:h-24 wobble"
               />
             </div>
             
             {/* Title */}
             <h1 className="font-cartoon text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-4 sm:mb-6 text-glow">
-              ABOUT KAATIL MUTTON
+              ABOUT KATIL MUTTON
             </h1>
             
             {/* Subtitle */}
@@ -90,7 +90,7 @@ const About = () => {
                   </p>
                   
                   <p className="font-comic text-base sm:text-lg text-card-foreground leading-relaxed">
-                    Our founder grew up watching his grandmother create <span className="text-spice-orange font-bold">magical flavors</span> with simple ingredients and lots of love. Those precious recipes became the foundation of Kaatil Mutton!
+                    Our founder grew up watching his grandmother create <span className="text-spice-orange font-bold">magical flavors</span> with simple ingredients and lots of love. Those precious recipes became the foundation of Katil Mutton!
                   </p>
                   
                   <p className="font-comic text-base sm:text-lg text-card-foreground leading-relaxed">
@@ -101,7 +101,7 @@ const About = () => {
                 <div className="mt-6 sm:mt-8">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center">
-                      <div className="text-2xl sm:text-3xl font-cartoon text-primary mb-2">10K+</div>
+                      <div className="text-2xl sm:text-3xl font-cartoon text-primary mb-2">100+</div>
                       <div className="text-sm font-comic text-card-foreground">Happy Customers</div>
                     </div>
                     <div className="text-center">
@@ -480,7 +480,7 @@ const About = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Kaatil Mutton Location - Sangam Vihar, Delhi - 84"
+                    title="Katil Mutton Location - Sangam Vihar, Delhi - 84"
                     className="absolute inset-0"
                   />
                   
@@ -493,7 +493,7 @@ const About = () => {
                 {/* Map Caption */}
                 <div className="mt-4 text-center">
                   <p className="font-comic text-sm text-card-foreground">
-                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - Sangam Vihar, Delhi - 84
+                    📍 <span className="font-bold">Katil Mutton Kitchen</span> - Sangam Vihar, Delhi - 84
                   </p>
                   <p className="font-comic text-xs text-card-foreground/70 mt-1">
                     Easy access by train, bus, or car! 🚊🚌🚗
@@ -511,8 +511,8 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-3 mb-4">
-                <img src={goatMascot} alt="Logo" className="w-10 sm:w-12 h-10 sm:h-12" />
-                <span className="font-cartoon text-xl sm:text-2xl">Kaatil Mutton</span>
+                <img src={goatMascot} alt="Logo" className="h-10 sm:h-12" />
+                <span className="font-cartoon text-xl sm:text-2xl">Katil Mutton</span>
               </div>
               <p className="font-comic text-sm sm:text-base leading-relaxed">
                 Bringing you the best homestyle mutton dishes with killer flavors!
@@ -535,22 +535,27 @@ const About = () => {
                   📱 +91 93106 45115
                 </a>
                 <a 
-                  href="mailto:kaatilmutton@gmail.com" 
+                  href="mailto:customercare.katilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 kaatilmutton@gmail.com
+                  📧 customercare.katilmutton@gmail.com
                 </a>
-                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Delhi, India</p>
+                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Sangam Vihar, Delhi - 84</p>
               </div>
             </div>
             
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h3 className="font-cartoon text-lg sm:text-xl mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
-                {['Facebook', 'Instagram',].map((social) => (
-                  <CartoonButton key={social} variant="outline" size="xs" className="text-xs">
-                    {social}
+                {[
+                  { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61579984918850' },
+                  { name: 'Instagram', url: 'https://www.instagram.com/katilmutton/' },
+                ].map((social) => (
+                  <a href={social.url} key={social.name} target="_blank" rel="noopener noreferrer">
+                  <CartoonButton variant="outline" size="xs" className="text-xs">
+                    {social.name}
                   </CartoonButton>
+                  </a>
                 ))}
               </div>
               
@@ -571,7 +576,7 @@ const About = () => {
           
           <div className="border-t border-accent-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="font-comic text-sm sm:text-base">
-              © 2024 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
+              © 2025 Katil Mutton. All rights reserved. Made with ❤️ and spices!
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Home, Info, Users, Phone, ChefHat } from "lucide-react";
 import { CartoonButton } from "./CartoonButton";
-import goatMascot from "@/assets/goat-mascot.webp";
+import goatMascot from "@/assets/logo.jpg";
 
 interface MobileNavigationProps {
   onScrollToSection: (id: string) => void;
@@ -32,11 +32,11 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
             {/* Logo */}
             <div className="flex items-center gap-3">
               <img 
-                src={goatMascot} 
-                alt="Kaatil Mutton restaurant logo featuring cartoon goat mascot" 
-                className="w-10 h-10 wobble"
+                src={goatMascot}  
+                alt="Katil Mutton logo" 
+                className="h-10 wobble"
               />
-              <span className="font-cartoon text-xl text-accent" role="heading" aria-level={1}>Kaatil</span>
+              <span className="font-cartoon text-xl text-accent" role="heading" aria-level="1">Katil Mutton</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -73,7 +73,6 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
                 variant="hero" 
                 size="sm"
                 onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
-                animation="pulse"
               >
                 Order Now!
               </CartoonButton>
@@ -84,6 +83,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               onClick={toggleMenu}
               className="md:hidden p-2 rounded-lg border-2 border-accent bg-card shadow-cartoon hover:shadow-pop transition-all"
               aria-label="Toggle menu"
+              title="Toggle menu"
             >
               {isOpen ? (
                 <X className="w-6 h-6 text-accent" />
@@ -115,17 +115,18 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
             <div className="flex items-center gap-3">
               <img 
                 src={goatMascot} 
-                alt="Kaatil Mutton" 
+                alt="Katil Mutton" 
                 className="w-12 h-12"
               />
               <div>
-                <h2 className="font-cartoon text-xl text-accent">Kaatil Mutton</h2>
+                <h2 className="font-cartoon text-xl text-accent">Katil Mutton</h2>
                 <p className="font-comic text-sm text-muted-foreground">Taste That Slays!</p>
               </div>
             </div>
             <button
               onClick={toggleMenu}
               className="p-2 rounded-lg border-2 border-accent bg-card shadow-cartoon hover:shadow-pop transition-all"
+              title="Close menu"
             >
               <X className="w-5 h-5 text-accent" />
             </button>
@@ -135,6 +136,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
           <nav className="space-y-4">
             <button
               onClick={() => handleNavClick('hero')}
+              title="Navigate to Home section"
               className="w-full flex items-center gap-4 p-3 rounded-xl border-2 border-accent bg-card hover:bg-primary hover:text-primary-foreground transition-all shadow-cartoon hover:shadow-pop group"
             >
               <Home className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
@@ -175,7 +177,6 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               variant="hero"
               size="lg"
               fullWidth
-              animation="bounce"
               onClick={() => handleNavClick('menu')}
             >
               🔥 Order Now!
@@ -186,11 +187,18 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
           <div className="bg-card/50 rounded-xl p-4 border-2 border-accent space-y-2">
             <h3 className="font-cartoon text-lg text-accent mb-2">Quick Contact</h3>
             <div className="space-y-1 font-comic text-sm text-card-foreground">
-              <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-primary" />
-                +91 9310645115
-              </p>
-              <p>📧 kaatilmutton@gmail.com</p>
+              <a 
+                  href="tel:+919310645115" 
+                  className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
+                >
+                  📱 +91 93106 45115
+                </a>
+                <a 
+                  href="mailto:customercare.katilmutton@gmail.com" 
+                  className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
+                >
+                  📧 customercare.katilmutton@gmail.com
+                </a>
               <p>📍 Sangam Vihar, Delhi - 84</p>
             </div>
           </div>

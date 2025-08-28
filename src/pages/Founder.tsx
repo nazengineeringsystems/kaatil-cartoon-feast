@@ -44,7 +44,7 @@ const Founder = () => {
                   everyone craves but can rarely find.
                 </p>
                 <p className="font-comic text-lg text-card-foreground leading-relaxed">
-                  Every recipe at Kaatil Mutton carries his personal touch, ensuring that each dish 
+                  Every recipe at Katil Mutton carries his personal touch, ensuring that each dish 
                   tells a story of passion, tradition, and <span className="text-primary font-bold">killer taste!</span>
                 </p>
               </ComicPanel>
@@ -63,7 +63,7 @@ const Founder = () => {
                   <div className="w-12 h-12 bg-spice-orange rounded-full flex items-center justify-center mx-auto mb-2">
                     <Users className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <div className="font-cartoon text-2xl text-accent">10k+</div>
+                  <div className="font-cartoon text-2xl text-accent">100+</div>
                   <div className="font-comic text-sm text-card-foreground">Happy Customers</div>
                 </ComicPanel>
               </div>
@@ -73,7 +73,7 @@ const Founder = () => {
               <ComicPanel className="relative overflow-hidden">
                 <img 
                   src={founderImage} 
-                  alt="Founder of Kaatil Mutton"
+                  alt="Founder of Katil Mutton"
                   className="w-full h-96 object-cover rounded-lg border-2 border-accent"
                 />
                 <div className="absolute top-4 right-4 speech-bubble bg-primary text-primary-foreground">

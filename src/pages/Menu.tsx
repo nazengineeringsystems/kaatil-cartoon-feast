@@ -64,8 +64,8 @@ const Menu = () => {
           <div className="flex justify-center mb-6 sm:mb-8">
             <img 
               src={goatMascot} 
-              alt="Kaatil Mutton Mascot" 
-              className=" h-16 sm:h-20 md:h-24 wobble"
+              alt="Katil Mutton Logo" 
+              className="h-16 sm:h-20 md:h-24 wobble"
             />
           </div>
           
@@ -95,13 +95,13 @@ const Menu = () => {
           <div className="flex justify-center mb-16 sm:mb-20 md:mb-24">
             <div className="w-full max-w-md">
               <MenuCard
-                title="KAATIL COMBO"
+                title="KATIL COMBO"
                 description="Korma + 4 Rumali Roti + Salad + Coke - The perfect combination that'll make your taste buds dance! Ultimate satisfaction guaranteed! 🔥🍽️"
                 image={curryCartoon}
                 price="₹299"
                 originalPrice="₹399"
                 rating={5.0}
-                onClick={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KAATIL%20COMBO%22%20offer", "_blank")}
+                onOrder={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
                 className="transform hover:scale-105 transition-all duration-300"
               />
             </div>
@@ -156,7 +156,7 @@ const Menu = () => {
               variant="hero"
               size="lg"
               className="w-full sm:w-auto sm:min-w-[200px]"
-              onClick={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KAATIL%20COMBO%22%20offer", "_blank")}
+              onClick={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
             >
               Order Combo Now! 🔥
             </CartoonButton>
@@ -181,8 +181,8 @@ const Menu = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-3 mb-4">
-                <img src={goatMascot} alt="Logo" className="w-10 sm:w-12 h-10 sm:h-12" />
-                <span className="font-cartoon text-xl sm:text-2xl">Kaatil Mutton</span>
+                <img src={goatMascot} alt="Logo" className="h-10 sm:h-12" />
+                <span className="font-cartoon text-xl sm:text-2xl">Katil Mutton</span>
               </div>
               <p className="font-comic text-sm sm:text-base leading-relaxed">
                 Bringing you the best homestyle mutton dishes with killer flavors!
@@ -205,21 +205,30 @@ const Menu = () => {
                   📱 +91 93106 45115
                 </a>
                 <a 
-                  href="mailto:kaatilmutton@gmail.com" 
+                  href="mailto:customercare.katilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 kaatilmutton@gmail.com
+                  📧 customercare.katilmutton@gmail.com
                 </a>
-                <p className="flex items-center justify-center sm:justify-start gap-2">📍 New Delhi, India</p>
+                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Sangam Vihar, Delhi - 84</p>
               </div>
             </div>
             
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h3 className="font-cartoon text-lg sm:text-xl mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
-                {['Facebook', 'Instagram'].map((social) => (
-                  <CartoonButton key={social} variant="outline" size="xs" className="text-xs">
-                    {social}
+                {[
+                  { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61579984918850' },
+                  { name: 'Instagram', url: 'https://www.instagram.com/katilmutton/' }
+                ].map(({ name, url }) => (
+                  <CartoonButton
+                  key={name}
+                  variant="outline"
+                  size="xs"
+                  className="text-xs"
+                  onClick={() => window.open(url, '_blank')}
+                  >
+                  {name}
                   </CartoonButton>
                 ))}
               </div>
@@ -228,7 +237,7 @@ const Menu = () => {
           
           <div className="border-t border-accent-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="font-comic text-sm sm:text-base">
-              © 2025 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
+              © 2025 Katil Mutton. All rights reserved. Made with ❤️ and spices!
             </p>
           </div>
         </div>
