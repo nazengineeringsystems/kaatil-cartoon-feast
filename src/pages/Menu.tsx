@@ -9,7 +9,7 @@ import { toast } from "@/hooks/use-toast";
 
 // Import cartoon images
 import curryCartoon from "@/assets/curry-cartoon.webp";
-import goatMascot from "@/assets/logo_withoutbg.png";
+import goatMascot from "@/assets/logo.jpg";
 
 const Menu = () => {
   const [cart, setCart] = useState<string[]>([]);
@@ -65,7 +65,7 @@ const Menu = () => {
             <img 
               src={goatMascot} 
               alt="Kaatil Mutton Mascot" 
-              className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 wobble"
+              className=" h-16 sm:h-20 md:h-24 wobble"
             />
           </div>
           

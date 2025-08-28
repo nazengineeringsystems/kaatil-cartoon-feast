@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import heroChef from "@/assets/hero-chef.webp";
 import kitchenScene from "@/assets/kitchen-scene.webp";
 import happyCustomer from "@/assets/happy-customer.webp";
-import goatMascot from "@/assets/goat-mascot.webp";
+import goatMascot from "@/assets/logo.jpg";
 
 const About = () => {
   const scrollToSection = (id: string) => {
@@ -53,7 +53,7 @@ const About = () => {
               <img 
                 src={goatMascot} 
                 alt="Kaatil Mutton Mascot" 
-                className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 wobble"
+                className=" h-16 sm:h-20 md:h-24 wobble"
               />
             </div>
             
