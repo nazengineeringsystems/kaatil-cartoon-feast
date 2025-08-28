@@ -41,13 +41,13 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              <button 
-                onClick={() => onScrollToSection('hero')}
+                <Link 
+                to="/"
                 className="font-comic text-accent hover:text-primary transition-colors flex items-center gap-2"
-              >
+                >
                 <Home className="w-4 h-4" />
                 Home
-              </button>
+                </Link>
               <Link 
                 to="/about"
                 className="font-comic text-accent hover:text-primary transition-colors flex items-center gap-2"
@@ -72,7 +72,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               <CartoonButton 
                 variant="hero" 
                 size="sm"
-                onClick={() => onScrollToSection('menu')}
+                onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
                 animation="pulse"
               >
                 Order Now!
@@ -188,10 +188,10 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
             <div className="space-y-1 font-comic text-sm text-card-foreground">
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
-                +91 9876543210
+                +91 9310645115
               </p>
-              <p>📧 order@kaatilmutton.com</p>
-              <p>📍 Mumbai, India</p>
+              <p>📧 kaatilmutton@gmail.com</p>
+              <p>📍 Sangam Vihar, Delhi - 84</p>
             </div>
           </div>
         </div>

@@ -421,8 +421,8 @@ const About = () => {
                     <div>
                       <h4 className="font-cartoon text-lg text-accent mb-2">Call Us</h4>
                       <div className="space-y-1">
-                        <a href="tel:+919876543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
-                          📱 +91 98765 43210
+                        <a href="tel:+919310645115" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                          📱 +91 93106 45115
                         </a>
                         {/* <br/>
                         <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
@@ -448,7 +448,7 @@ const About = () => {
                   {/* Directions Button */}
                   <div className="pt-4">
                     <a 
-                      href="https://maps.google.com/?q=Shivaji+Nagar+Bandra+West+Mumbai+Kaatil+Mutton"
+                      href="https://maps.app.goo.gl/twZNsM8kaZnb8JWZ9"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block"
@@ -473,7 +473,7 @@ const About = () => {
               <ComicPanel className="p-4 sm:p-6 h-full">
                 <div className="relative w-full h-80 sm:h-96 lg:h-full min-h-[400px] rounded-xl overflow-hidden border-4 border-accent/20">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2234567890123!2d72.8261!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c7b123456%3A0x123456789abcdef!2sShivaji%20Nagar%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra%20400050!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.7132107638513!2d77.212281775506!3d28.728115579733686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cff4e96b1f937%3A0x792669c17b3a725a!2sNaz%20Engineering%20Systems!5e0!3m2!1sen!2sin!4v1756298588551!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -481,7 +481,7 @@ const About = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Kaatil Mutton Location - Sangam Vihar, Delhi - 84"
-                    className="rounded-lg"
+                    className="absolute inset-0"
                   />
                   
                   {/* Map Overlay */}

@@ -142,7 +142,7 @@ const Founder = () => {
             </p>
           </ComicPanel>
           
-          <Link to="/">
+          <Link to="/menu">
             <CartoonButton variant="hero" size="xl" className="text-2xl">
               Explore Our Menu! 🍽️
             </CartoonButton>

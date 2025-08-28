@@ -9,7 +9,7 @@ import { toast } from "@/hooks/use-toast";
 
 // Import cartoon images
 import curryCartoon from "@/assets/curry-cartoon.webp";
-import goatMascot from "@/assets/goat-mascot.webp";
+import goatMascot from "@/assets/logo_withoutbg.png";
 
 const Menu = () => {
   const [cart, setCart] = useState<string[]>([]);
@@ -101,7 +101,7 @@ const Menu = () => {
                 price="₹299"
                 originalPrice="₹399"
                 rating={5.0}
-                onAddToCart={() => handleAddToCart('KAATIL COMBO (Korma + 4 Rumali Roti + Salad + Coke)')}
+                onClick={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KAATIL%20COMBO%22%20offer", "_blank")}
                 className="transform hover:scale-105 transition-all duration-300"
               />
             </div>
@@ -156,7 +156,7 @@ const Menu = () => {
               variant="hero"
               size="lg"
               className="w-full sm:w-auto sm:min-w-[200px]"
-              onClick={() => handleAddToCart('KAATIL COMBO (Korma + 4 Rumali Roti + Salad + Coke)')}
+              onClick={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KAATIL%20COMBO%22%20offer", "_blank")}
             >
               Order Combo Now! 🔥
             </CartoonButton>
@@ -199,25 +199,25 @@ const Menu = () => {
                   👨‍🍳 Meet Our Founder
                 </Link>
                 <a 
-                  href="tel:+919876543210" 
+                  href="tel:+919310645115" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📱 +91 9876543210
+                  📱 +91 93106 45115
                 </a>
                 <a 
-                  href="mailto:order@kaatilmutton.com" 
+                  href="mailto:kaatilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 order@kaatilmutton.com
+                  📧 kaatilmutton@gmail.com
                 </a>
-                <p className="flex items-center justify-center sm:justify-start gap-2">📍 Mumbai, India</p>
+                <p className="flex items-center justify-center sm:justify-start gap-2">📍 New Delhi, India</p>
               </div>
             </div>
             
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h3 className="font-cartoon text-lg sm:text-xl mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
-                {['Facebook', 'Instagram', 'Twitter'].map((social) => (
+                {['Facebook', 'Instagram'].map((social) => (
                   <CartoonButton key={social} variant="outline" size="xs" className="text-xs">
                     {social}
                   </CartoonButton>
@@ -228,7 +228,7 @@ const Menu = () => {
           
           <div className="border-t border-accent-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="font-comic text-sm sm:text-base">
-              © 2024 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
+              © 2025 Kaatil Mutton. All rights reserved. Made with ❤️ and spices!
             </p>
           </div>
         </div>
