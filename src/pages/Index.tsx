@@ -68,14 +68,15 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-6 sm:px-8 md:px-10 text-center relative z-10">
-          {/* Mascot */}
+          
+          {/* Mascot
           <div className="flex justify-center mb-6 sm:mb-8">
             <img 
               src={goatMascot} 
               alt="Katil Mutton Logo" 
               className=" h-16 sm:h-20 md:h-24 wobble"
             />
-          </div>
+          </div> */}
           
           {/* Main Title */}
           <h1 className="font-cartoon text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-foreground mb-4 sm:mb-6 text-glow leading-tight">

@@ -177,7 +177,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               variant="hero"
               size="lg"
               fullWidth
-              onClick={() => handleNavClick('menu')}
+              onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
             >
               🔥 Order Now!
             </CartoonButton>
@@ -191,15 +191,15 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
                   href="tel:+919310645115" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📱 +91 93106 45115
+                 +91 93106 45115
                 </a>
                 <a 
                   href="mailto:customercare.katilmutton@gmail.com" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📧 customercare.katilmutton@gmail.com
+                customercare.katilmutton@gmail.com
                 </a>
-              <p>📍 Sangam Vihar, Delhi - 84</p>
+              <p>Sangam Vihar, Delhi - 84</p>
             </div>
           </div>
         </div>

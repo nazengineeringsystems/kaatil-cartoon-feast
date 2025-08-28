@@ -48,14 +48,14 @@ const About = () => {
               </Link>
             </div>
             
-            {/* Mascot */}
+            {/* Mascot
             <div className="flex justify-center mb-4 sm:mb-6">
               <img 
                 src={goatMascot} 
                 alt="Katil Mutton Logo" 
                 className=" h-16 sm:h-20 md:h-24 wobble"
               />
-            </div>
+            </div> */}
             
             {/* Title */}
             <h1 className="font-cartoon text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-4 sm:mb-6 text-glow">

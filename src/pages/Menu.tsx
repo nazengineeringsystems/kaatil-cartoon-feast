@@ -60,14 +60,14 @@ const Menu = () => {
             <span className="font-comic">Menu</span>
           </div>
           
-          {/* Page Title */}
+          {/* Page Title
           <div className="flex justify-center mb-6 sm:mb-8">
             <img 
               src={goatMascot} 
               alt="Katil Mutton Logo" 
               className="h-16 sm:h-20 md:h-24 wobble"
             />
-          </div>
+          </div> */}
           
           <h1 className="font-cartoon text-4xl sm:text-6xl md:text-7xl text-primary-foreground mb-4 sm:mb-6 text-glow">
             OUR MENU
