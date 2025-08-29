@@ -81,7 +81,7 @@ const Index = () => {
           {/* Main Title */}
           <h1 className="font-cartoon text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-foreground mb-4 sm:mb-6 text-glow leading-tight">
             <span className="block text-spice-yellow text-bouncy mt-2">KATIL</span>
-            <span className="block ">MUTTON</span>
+            <span className="block text-accent text-bouncy mt-2">MUTTON</span>
           </h1>
           
           {/* Tagline */}
@@ -109,7 +109,7 @@ const Index = () => {
             <CartoonButton
               variant="hero"
               size="xl"
-              onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
+              onClick={() => window.open("https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
               className="w-full sm:w-auto sm:min-w-[200px] order-1"
               icon={<ChefHat className="w-6 h-6" />}
               iconPosition="left"
@@ -214,7 +214,7 @@ const Index = () => {
               price="₹299"
               originalPrice="₹399"
               rating={5.0}
-              onOrder={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
+              onOrder={() => window.open("http://wa.me/919310756714?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
               />
             </div>
           </div>
@@ -296,7 +296,7 @@ const Index = () => {
                     variant="hero" 
                     size="lg"
                     className="text-lg sm:text-xl w-full sm:w-auto sm:min-w-[180px]"
-                    onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
+                    onClick={() => window.open("https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
                     >
                     Order Now! 🛒
                     </CartoonButton>
@@ -305,7 +305,7 @@ const Index = () => {
                     variant="outline" 
                     size="lg"
                     className="text-lg sm:text-xl w-full sm:w-auto sm:min-w-[160px]"
-                    onClick={() => window.location.href = "tel:+919310645115"}
+                    onClick={() => window.location.href = "tel:+919310756714"}
                     >
                     <Phone className="w-5 h-5 mr-2" />
                     Call Now
@@ -377,8 +377,8 @@ const Index = () => {
                     <div>
                       <h4 className="font-cartoon text-lg text-accent mb-2">Call Us</h4>
                       <div className="space-y-1">
-                        <a href="tel:+919310645115" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
-                          📱 +91 93106 45115
+                        <a href="tel:+919310756714" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                          📱 +91 93107 56714
                         </a>
                         <br/>
                         {/* <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
@@ -449,7 +449,7 @@ const Index = () => {
                 {/* Map Caption */}
                 <div className="mt-4 text-center">
                   <p className="font-comic text-sm text-card-foreground">
-                    📍 <span className="font-bold">Kaatil Mutton Kitchen</span> - New Delhi, India
+                    📍 <span className="font-bold">Katil Mutton Kitchen</span> - Sangam Vihar, Delhi - 84
                   </p>
                   <p className="font-comic text-xs text-card-foreground/70 mt-1">
                     Easy access by train, bus, or car! 🚊🚌🚗
@@ -520,10 +520,10 @@ const Index = () => {
                   👨‍🍳 Meet Our Founder
                 </Link>
                 <a 
-                  href="tel:+919310645115" 
+                  href="tel:+919310756714" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📱 +91 93106 45115
+                  📱 +91 93107 56714
                 </a>
                 <a 
                   href="mailto:customercare.katilmutton@gmail.com" 
@@ -558,7 +558,7 @@ const Index = () => {
               {/* Quick Order Button */}
               <div className="mt-6">
                 <a 
-                  href="https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something"
+                  href="https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

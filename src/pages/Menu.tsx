@@ -101,7 +101,7 @@ const Menu = () => {
                 price="₹299"
                 originalPrice="₹399"
                 rating={5.0}
-                onOrder={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
+                onOrder={() => window.open("http://wa.me/919310756714?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
                 className="transform hover:scale-105 transition-all duration-300"
               />
             </div>
@@ -156,7 +156,7 @@ const Menu = () => {
               variant="hero"
               size="lg"
               className="w-full sm:w-auto sm:min-w-[200px]"
-              onClick={() => window.open("http://wa.me/919310645115?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
+              onClick={() => window.open("http://wa.me/919310756714?text=Hey%2C%20I%20need%20%22KATIL%20COMBO%22%20offer", "_blank")}
             >
               Order Combo Now! 🔥
             </CartoonButton>

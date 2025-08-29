@@ -76,8 +76,9 @@ const Founder = () => {
                   alt="Founder of Katil Mutton"
                   className="w-full h-96 object-cover rounded-lg border-2 border-accent"
                 />
+                
                 <div className="absolute top-4 right-4 speech-bubble bg-primary text-primary-foreground">
-                  <span className="font-cartoon text-sm">The Boss! 👨‍🍳</span>
+                  <span className="font-cartoon text-sm">LOVE YOU BOSS! ❤️</span>
                 </div>
               </ComicPanel>
             </div>

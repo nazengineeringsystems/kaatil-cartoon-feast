@@ -349,7 +349,7 @@ const About = () => {
           </ComicPanel>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md mx-auto">
-            <Link to="https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something." target="_blank" rel="noopener noreferrer" className="block w-full">
+            <Link to="https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something." target="_blank" rel="noopener noreferrer" className="block w-full">
               <CartoonButton 
                 variant="hero" 
                 size="lg"
@@ -421,8 +421,8 @@ const About = () => {
                     <div>
                       <h4 className="font-cartoon text-lg text-accent mb-2">Call Us</h4>
                       <div className="space-y-1">
-                        <a href="tel:+919310645115" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
-                          📱 +91 93106 45115
+                        <a href="tel:+919310756714" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
+                          📱 +91 93107 56714
                         </a>
                         {/* <br/>
                         <a href="tel:+912226543210" className="font-comic text-base text-card-foreground hover:text-primary transition-colors">
@@ -529,10 +529,10 @@ const About = () => {
                   👨‍🍳 Meet Our Founder
                 </Link>
                 <a 
-                  href="tel:+919310645115" 
+                  href="tel:+919310756714" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                  📱 +91 93106 45115
+                  📱 +91 93107 56714
                 </a>
                 <a 
                   href="mailto:customercare.katilmutton@gmail.com" 
@@ -561,7 +561,7 @@ const About = () => {
               
               {/* Quick Order Button */}
               <div className="mt-6">
-                <Link to="https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something." target="_blank" rel="noopener noreferrer" className="block">
+                <Link to="https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something." target="_blank" rel="noopener noreferrer" className="block">
                   <CartoonButton 
                     variant="hero" 
                     size="sm" 

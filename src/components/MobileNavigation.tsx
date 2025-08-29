@@ -72,7 +72,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               <CartoonButton 
                 variant="hero" 
                 size="sm"
-                onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
+                onClick={() => window.open("https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
               >
                 Order Now!
               </CartoonButton>
@@ -177,7 +177,7 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
               variant="hero"
               size="lg"
               fullWidth
-              onClick={() => window.open("https://wa.me/919310645115?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
+              onClick={() => window.open("https://wa.me/919310756714?text=Hey%2C%20I%20need%20to%20order%20something", "_blank")}
             >
               🔥 Order Now!
             </CartoonButton>
@@ -188,10 +188,10 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
             <h3 className="font-cartoon text-lg text-accent mb-2">Quick Contact</h3>
             <div className="space-y-1 font-comic text-sm text-card-foreground">
               <a 
-                  href="tel:+919310645115" 
+                  href="tel:+919310756714" 
                   className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
-                 +91 93106 45115
+                 +91 93107 56714
                 </a>
                 <a 
                   href="mailto:customercare.katilmutton@gmail.com" 
