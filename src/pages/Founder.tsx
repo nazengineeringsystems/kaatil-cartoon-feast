@@ -77,8 +77,13 @@ const Founder = () => {
                   className="w-full h-96 object-cover rounded-lg border-2 border-accent"
                 />
                 
-                <div className="absolute top-4 right-4 speech-bubble bg-primary text-primary-foreground">
+                <div className="absolute top-4 right-4 speech-bubble bg-spice-orange text-primary-foreground">
                   <span className="font-cartoon text-sm">LOVE YOU BOSS! ❤️</span>
+                </div>
+                                <div className="mt-4 text-center">
+                  <p className="font-comic text-sm text-card-foreground">
+                     <span className="font-bold">Late Sh. Nazish Khan</span> (1978-2025)
+                  </p>
                 </div>
               </ComicPanel>
             </div>
