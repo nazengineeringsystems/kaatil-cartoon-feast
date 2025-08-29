@@ -189,13 +189,13 @@ export const MobileNavigation = ({ onScrollToSection }: MobileNavigationProps) =
             <div className="space-y-1 font-comic text-sm text-card-foreground">
               <a 
                   href="tel:+919310756714" 
-                  className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
+                  className="block hover:text-spice-yellow transition-colors flex  sm:justify-start gap-2"
                 >
                  +91 93107 56714
                 </a>
                 <a 
                   href="mailto:customercare.katilmutton@gmail.com" 
-                  className="block hover:text-spice-yellow transition-colors flex items-center justify-center sm:justify-start gap-2"
+                  className="block hover:text-spice-yellow transition-colors flex  sm:justify-start gap-2"
                 >
                 customercare.katilmutton@gmail.com
                 </a>
