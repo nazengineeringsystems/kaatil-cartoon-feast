@@ -4,10 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import Index from "./pages/Index";
-import Menu from "./pages/Menu";
-import About from "./pages/About";
-import Founder from "./pages/Founder";
+import Index from "./pages/Index.tsx";
+import Menu from "./pages/Menu.tsx";
+import About from "./pages/About.tsx";
+import Founder from "./pages/Founder.tsx";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
